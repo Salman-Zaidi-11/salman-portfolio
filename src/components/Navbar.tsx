@@ -35,7 +35,7 @@ function Navbar() {
           <span className="flex h-10 w-10 items-center justify-center rounded-full border border-[var(--border)] bg-[var(--surface-strong)] text-sm font-semibold tracking-[0.2em] shadow-sm">
             SZ
           </span>
-          <span className="text-sm font-semibold uppercase tracking-[0.3em]">Salman's Portfolio</span>
+          <span className=" text-sm font-semibold uppercase tracking-[0.3em]">Salman's Portfolio</span>
         </motion.a>
 
         <div className="hidden items-center gap-2 md:flex">
