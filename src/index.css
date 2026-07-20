@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Manrope:wght@500;600;700;800&display=swap');
+@import 'tailwindcss';
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+:root {
+  color-scheme: light;
+  --bg: #f4f7ff;
+  --bg-elevated: #ffffff;
+  --surface: rgba(255, 255, 255, 0.78);
+  --surface-strong: #ffffff;
+  --surface-muted: #f7faff;
+  --text: #0f172a;
+  --text-muted: #475569;
+  --border: rgba(15, 23, 42, 0.09);
+  --border-strong: rgba(15, 23, 42, 0.16);
+  --accent: #2563eb;
+  --accent-strong: #1d4ed8;
+  --accent-soft: rgba(37, 99, 235, 0.14);
+  --shadow: 0 28px 80px -30px rgba(15, 23, 42, 0.28);
+  --shadow-soft: 0 16px 48px -24px rgba(15, 23, 42, 0.24);
+  --shadow-glow: 0 0 0 1px rgba(37, 99, 235, 0.08), 0 20px 50px -20px rgba(37, 99, 235, 0.24);
+  --bg-radial-a: rgba(37, 99, 235, 0.16);
+  --bg-radial-b: rgba(14, 165, 233, 0.1);
+  --bg-radial-c: rgba(129, 140, 248, 0.12);
+  --radius-sm: 0.75rem;
+  --radius-md: 1rem;
+  --radius-lg: 1.5rem;
+  --radius-xl: 2rem;
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.25rem;
+  --space-6: 1.5rem;
+  --space-8: 2rem;
+  --space-10: 2.5rem;
+  --space-12: 3rem;
+  --space-16: 4rem;
+  --space-20: 5rem;
+  font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+:root[data-theme='dark'] {
+  color-scheme: dark;
+  --bg: #020817;
+  --bg-elevated: #0f172a;
+  --surface: rgba(15, 23, 42, 0.8);
+  --surface-strong: #111c33;
+  --surface-muted: #0b1220;
+  --text: #f8fafc;
+  --text-muted: #cbd5e1;
+  --border: rgba(148, 163, 184, 0.2);
+  --border-strong: rgba(148, 163, 184, 0.3);
+  --accent: #7dd3fc;
+  --accent-strong: #38bdf8;
+  --accent-soft: rgba(125, 211, 252, 0.16);
+  --shadow: 0 32px 90px -28px rgba(2, 6, 23, 0.86);
+  --shadow-soft: 0 20px 58px -24px rgba(2, 6, 23, 0.78);
+  --shadow-glow: 0 0 0 1px rgba(125, 211, 252, 0.16), 0 24px 54px -20px rgba(8, 145, 178, 0.4);
+  --bg-radial-a: rgba(56, 189, 248, 0.2);
+  --bg-radial-b: rgba(96, 165, 250, 0.13);
+  --bg-radial-c: rgba(129, 140, 248, 0.17);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  background-color: var(--bg);
+  background-image:
+    radial-gradient(circle at top left, var(--bg-radial-a), transparent 24%),
+    radial-gradient(circle at 85% 10%, var(--bg-radial-b), transparent 24%),
+    radial-gradient(circle at bottom right, var(--bg-radial-c), transparent 26%),
+    linear-gradient(135deg, var(--bg) 0%, var(--bg-elevated) 100%);
+  background-attachment: fixed;
+  color: var(--text);
+  transition: background-color 0.35s ease, color 0.35s ease, background-image 0.35s ease;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+::selection {
+  background: var(--accent-soft);
+  color: var(--text);
+}
+
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: 'Manrope', 'Inter', sans-serif;
+  letter-spacing: -0.025em;
+}
+
+p,
+span,
+a,
+button,
+input,
+textarea {
+  font-family: 'Inter', system-ui, sans-serif;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

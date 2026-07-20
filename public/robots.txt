@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://salman-portfolio.dev/sitemap.xml
