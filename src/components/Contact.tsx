@@ -14,8 +14,8 @@ const contactCards = [
   },
   {
     label: 'LinkedIn',
-    value: 'Open to professional conversations',
-    href: '#',
+    value: 'Connect with me on LinkedIn',
+    href: 'https://www.linkedin.com/in/syedmsalman02/',
   },
 ]
 
