@@ -24,7 +24,7 @@ function ScrollProgress() {
   return (
     <>
       <motion.div
-        className="fixed inset-x-0 top-0 z-[80] h-1 origin-left bg-gradient-to-r from-[var(--accent)] via-cyan-400 to-sky-400"
+        className="fixed inset-x-0 top-0 z-[80] h-1 origin-left bg-gradient-to-r from-[var(--accent)] via-purple-400 to-pink-400"
         style={{ scaleX }}
       />
 
