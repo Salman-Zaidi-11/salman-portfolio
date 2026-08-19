@@ -17,7 +17,6 @@ const projects = [
     outcome: 'Increased release confidence by validating trust-critical flows and reducing booking-related defects before launch.',
     timeline: 'Q2 2024 • 6-week release cycle',
     accent: 'from-cyan-500/35 via-sky-500/20 to-transparent',
-    badgeTone: 'bg-cyan-500/15 text-cyan-100 border-cyan-400/30',
   },
   {
     title: 'CRM Platform',
@@ -35,7 +34,6 @@ const projects = [
     outcome: 'Strengthened confidence in core CRM functions and improved consistency across customer-facing workflows.',
     timeline: 'Q3 2024 • 8-week sprint cycle',
     accent: 'from-emerald-500/35 via-teal-500/20 to-transparent',
-    badgeTone: 'bg-emerald-500/15 text-emerald-100 border-emerald-400/30',
   },
   {
     title: 'HRM Platform',
@@ -53,7 +51,6 @@ const projects = [
     outcome: 'Improved trust in HR operations by validating permissions, data integrity, and form-driven workflows.',
     timeline: 'Q1 2024 • 5-week release window',
     accent: 'from-blue-500/35 via-indigo-500/20 to-transparent',
-    badgeTone: 'bg-blue-500/15 text-blue-100 border-blue-400/30',
   },
   {
     title: 'Auction Platform',
@@ -71,7 +68,6 @@ const projects = [
     outcome: 'Helped surface time-sensitive defects early and improved confidence in auction reliability during active flow windows.',
     timeline: 'Q4 2023 • 7-week release cycle',
     accent: 'from-amber-500/35 via-orange-500/20 to-transparent',
-    badgeTone: 'bg-amber-500/15 text-amber-100 border-amber-400/30',
   },
   {
     title: 'Web Applications',
@@ -89,7 +85,6 @@ const projects = [
     outcome: 'Improved product stability and reduced release risks by validating high-impact user journeys across web experiences.',
     timeline: 'Ongoing • continuous delivery',
     accent: 'from-violet-500/35 via-fuchsia-500/20 to-transparent',
-    badgeTone: 'bg-violet-500/15 text-violet-100 border-violet-400/30',
   },
   {
     title: 'Mobile Applications',
@@ -107,7 +102,6 @@ const projects = [
     outcome: 'Built greater confidence in mobile usability and product stability by validating real user flows under realistic conditions.',
     timeline: 'Ongoing • release-focused validation',
     accent: 'from-pink-500/35 via-rose-500/20 to-transparent',
-    badgeTone: 'bg-pink-500/15 text-pink-100 border-pink-400/30',
   },
 ]
 
@@ -139,20 +133,14 @@ function Projects() {
             <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-white/60 to-transparent" />
 
             <div className="relative">
-              <div className="flex items-start justify-between gap-4">
-                <div className="flex items-center gap-3">
-                  <div className="flex h-12 w-12 items-center justify-center rounded-2xl border border-white/20 bg-[var(--surface-strong)]/80 text-2xl shadow-[0_12px_30px_-18px_rgba(15,23,42,0.8)]">
-                    {project.icon}
-                  </div>
-                  <div>
-                    <h3 className="text-xl font-semibold text-[var(--text)]">{project.title}</h3>
-                    <p className="mt-1 text-[11px] font-semibold uppercase tracking-[0.28em] text-[var(--text-muted)]">{project.timeline}</p>
-                  </div>
+              <div className="flex items-center gap-3">
+                <div className="flex h-12 w-12 items-center justify-center rounded-2xl border border-white/20 bg-[var(--surface-strong)]/80 text-2xl shadow-[0_12px_30px_-18px_rgba(15,23,42,0.8)]">
+                  {project.icon}
                 </div>
-
-                <span className={`rounded-full border px-2.5 py-1 text-[10px] font-semibold uppercase tracking-[0.24em] ${project.badgeTone}`}>
-                  Live QA
-                </span>
+                <div>
+                  <h3 className="text-xl font-semibold text-[var(--text)]">{project.title}</h3>
+                  <p className="mt-1 text-[11px] font-semibold uppercase tracking-[0.28em] text-[var(--text-muted)]">{project.timeline}</p>
+                </div>
               </div>
 
               <div className="mt-6 grid gap-4 md:grid-cols-2">
