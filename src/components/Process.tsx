@@ -53,7 +53,6 @@ function Process() {
 
       <div className="mt-12 hidden lg:block">
         <div className="relative">
-          <div className="absolute left-0 right-0 top-1/2 h-px -translate-y-1/2 bg-gradient-to-r from-[var(--accent)]/20 via-[var(--accent)]/60 to-[var(--accent)]/20" />
           <div className="relative grid grid-cols-7 gap-4">
             {steps.map((step, index) => (
               <motion.div
@@ -62,14 +61,14 @@ function Process() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, amount: 0.25 }}
                 transition={{ duration: 0.4, delay: index * 0.06 }}
-                className="flex flex-col items-center text-center"
+                className="flex h-full flex-col items-center text-center"
               >
                 <div className="flex h-14 w-14 items-center justify-center rounded-2xl border border-[var(--border)] bg-[var(--surface-strong)] text-2xl shadow-sm">
                   {step.icon}
                 </div>
-                <div className="mt-4 rounded-[1.2rem] border border-[var(--border)] bg-[linear-gradient(135deg,rgba(255,255,255,0.16),rgba(255,255,255,0.04))] p-4 shadow-sm">
-                  <p className="text-sm font-semibold text-[var(--text)]">{step.title}</p>
-                  <p className="mt-2 text-sm leading-7 text-[var(--text-muted)]">{step.description}</p>
+                <div className="mt-4 flex h-full min-h-[16rem] w-full flex-col rounded-[1.2rem] border border-[var(--border)] bg-[linear-gradient(135deg,rgba(255,255,255,0.16),rgba(255,255,255,0.04))] p-4 shadow-sm">
+                  <p className="min-h-[3.25rem] text-sm font-semibold text-[var(--text)]">{step.title}</p>
+                  <p className="mt-2 flex-1 text-sm leading-7 text-[var(--text-muted)]">{step.description}</p>
                 </div>
               </motion.div>
             ))}
@@ -85,14 +84,14 @@ function Process() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true, amount: 0.2 }}
             transition={{ duration: 0.35, delay: index * 0.04 }}
-            className="relative rounded-[1.4rem] border border-[var(--border)] bg-[linear-gradient(135deg,rgba(255,255,255,0.16),rgba(255,255,255,0.04))] p-5 shadow-sm"
+            className="relative flex h-full rounded-[1.4rem] border border-[var(--border)] bg-[linear-gradient(135deg,rgba(255,255,255,0.16),rgba(255,255,255,0.04))] p-5 shadow-sm"
           >
-            <div className="flex items-start gap-4">
-              <div className="flex h-12 w-12 items-center justify-center rounded-2xl border border-[var(--border)] bg-[var(--surface-strong)] text-xl">
+            <div className="flex w-full items-start gap-4">
+              <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl border border-[var(--border)] bg-[var(--surface-strong)] text-xl">
                 {step.icon}
               </div>
-              <div>
-                <p className="text-sm font-semibold text-[var(--text)]">{step.title}</p>
+              <div className="flex min-h-[8rem] flex-1 flex-col justify-center">
+                <p className="min-h-[3rem] text-sm font-semibold text-[var(--text)]">{step.title}</p>
                 <p className="mt-2 text-sm leading-7 text-[var(--text-muted)]">{step.description}</p>
               </div>
             </div>

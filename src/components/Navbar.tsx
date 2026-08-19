@@ -1,6 +1,5 @@
 import { AnimatePresence, motion } from 'framer-motion'
 import { useEffect, useState } from 'react'
-import ThemeToggle from './ThemeToggle'
 import NavLink from './ui/NavLink'
 
 const links = [
@@ -42,20 +41,16 @@ function Navbar() {
           {links.map((link) => (
             <NavLink key={link.label} label={link.label} href={link.href} active={link.href === '#home'} />
           ))}
-          <div className="ml-2 flex items-center gap-2">
-            <ThemeToggle />
-            <motion.a
-              href="#contact"
-              whileHover={{ y: -1, scale: 1.01 }}
-              className="inline-flex items-center rounded-full border border-[var(--border)] bg-[var(--surface-strong)] px-4 py-2 text-sm font-semibold text-[var(--text)] transition hover:shadow-[var(--shadow-soft)]"
-            >
-              Contact 
-            </motion.a>
-          </div>
+          <motion.a
+            href="#contact"
+            whileHover={{ y: -1, scale: 1.01 }}
+            className="ml-2 inline-flex items-center rounded-full border border-[var(--border)] bg-[var(--surface-strong)] px-4 py-2 text-sm font-semibold text-[var(--text)] transition hover:shadow-[var(--shadow-soft)]"
+          >
+            Contact
+          </motion.a>
         </div>
 
         <div className="flex items-center gap-2 md:hidden">
-          <ThemeToggle />
           <motion.button
             type="button"
             onClick={() => setIsOpen((prev) => !prev)}
