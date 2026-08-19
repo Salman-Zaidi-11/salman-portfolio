@@ -1,7 +1,11 @@
 import { AnimatePresence, motion, useScroll, useSpring } from 'framer-motion'
 import { useEffect, useState } from 'react'
 
-function ScrollProgress() {
+type ScrollProgressProps = {
+  onVisibilityChange?: (visible: boolean) => void
+}
+
+function ScrollProgress({ onVisibilityChange }: ScrollProgressProps) {
   const { scrollYProgress } = useScroll()
   const scaleX = useSpring(scrollYProgress, {
     stiffness: 140,
@@ -11,11 +15,16 @@ function ScrollProgress() {
   const [showButton, setShowButton] = useState(false)
 
   useEffect(() => {
-    const onScroll = () => setShowButton(window.scrollY > 700)
+    const onScroll = () => {
+      const visible = window.scrollY > 700
+      setShowButton(visible)
+      onVisibilityChange?.(visible)
+    }
+
     onScroll()
     window.addEventListener('scroll', onScroll, { passive: true })
     return () => window.removeEventListener('scroll', onScroll)
-  }, [])
+  }, [onVisibilityChange])
 
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' })
