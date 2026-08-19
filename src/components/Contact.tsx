@@ -58,10 +58,20 @@ function Contact() {
           ))}
 
           <div className="rounded-[1.25rem] border border-[var(--border)] bg-[var(--surface)] p-5 shadow-sm">
-            <p className="text-sm font-semibold uppercase tracking-[0.24em] text-[var(--text-muted)]">Quick Note</p>
-            <p className="mt-2 text-base leading-8 text-[var(--text-muted)]">
-              I’m available for QA-focused opportunities, product quality conversations, and collaborative engineering work.
+            <p className="text-sm font-semibold uppercase tracking-[0.24em] text-[var(--text-muted)]">Take it with you</p>
+            <p className="mt-2 text-base leading-8 text-[var(--text)]">
+              Want to keep my profile handy? Download my resume and explore my QA experience, testing focus, and product impact when it suits you.
             </p>
+            <a
+              href="/resume.pdf"
+              download
+              className="mt-5 inline-flex items-center gap-2 rounded-full border border-[var(--accent)]/20 bg-[var(--surface-strong)]/70 px-4 py-2.5 text-sm font-medium text-[var(--text)] shadow-[0_0_0_1px_rgba(168,85,247,0.08),0_8px_18px_-14px_rgba(168,85,247,0.55)] backdrop-blur-md transition-all duration-200 hover:-translate-y-0.5 hover:border-[var(--accent)]/35 hover:bg-[var(--surface-strong)] hover:shadow-[0_0_0_1px_rgba(168,85,247,0.12),0_10px_24px_-14px_rgba(168,85,247,0.7)]"
+            >
+              <svg viewBox="0 0 24 24" aria-hidden="true" className="h-4 w-4 fill-current">
+                <path d="M12 3a1 1 0 0 1 1 1v8.59l2.3-2.3a1 1 0 1 1 1.4 1.42l-4 4a1 1 0 0 1-1.4 0l-4-4a1 1 0 1 1 1.4-1.42L11 12.59V4a1 1 0 0 1 1-1zm-7 13a1 1 0 0 1 1 1v1h12v-1a1 1 0 1 1 2 0v1a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-1a1 1 0 0 1 1-1z"/>
+              </svg>
+              Download Resume
+            </a>
           </div>
         </motion.div>
       </div>
