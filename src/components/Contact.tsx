@@ -63,7 +63,7 @@ function Contact() {
               Want to keep my profile handy? Download my resume and explore my QA experience, testing focus, and product impact when it suits you.
             </p>
             <a
-              href="/resume.pdf"
+              href="/SyedMSalman-Resume.pdf"
               download
               className="mt-5 inline-flex items-center gap-2 rounded-full border border-[var(--accent)]/20 bg-[var(--surface-strong)]/70 px-4 py-2.5 text-sm font-medium text-[var(--text)] shadow-[0_0_0_1px_rgba(168,85,247,0.08),0_8px_18px_-14px_rgba(168,85,247,0.55)] backdrop-blur-md transition-all duration-200 hover:-translate-y-0.5 hover:border-[var(--accent)]/35 hover:bg-[var(--surface-strong)] hover:shadow-[0_0_0_1px_rgba(168,85,247,0.12),0_10px_24px_-14px_rgba(168,85,247,0.7)]"
             >
