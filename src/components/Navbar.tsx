@@ -31,10 +31,10 @@ function Navbar() {
     >
       <nav className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 lg:px-8">
         <motion.a href="#home" whileHover={{ y: -1, scale: 1.01 }} className="flex items-center gap-3 text-[var(--text)]">
-          <span className="flex h-10 w-10 items-center justify-center rounded-full border border-[var(--border)] bg-[var(--surface-strong)] text-sm font-semibold tracking-[0.2em] shadow-sm">
-            SZ
+          <span className="flex h-10 w-10 items-center justify-center rounded-full border border-[var(--border)] bg-[radial-gradient(circle_at_top,_rgba(168,85,247,0.28),_rgba(15,23,42,0.95)_72%)] text-center text-sm font-bold tracking-[0.1em] text-white shadow-[0_0_18px_rgba(168,85,247,0.38)]">
+            <span className="inline-block translate-x-[1px]">S</span>
           </span>
-          <span className=" text-sm font-semibold uppercase tracking-[0.3em]">Salman's Portfolio</span>
+          <span className="text-sm font-semibold uppercase tracking-[0.3em]">Salman's Portfolio</span>
         </motion.a>
 
         <div className="hidden items-center gap-2 md:flex">
@@ -88,8 +88,8 @@ function Navbar() {
             <div className="mx-auto flex h-full max-w-7xl flex-col">
               <div className="flex items-center justify-between">
                 <a href="#home" className="flex items-center gap-3 text-[var(--text)]">
-                  <span className="flex h-10 w-10 items-center justify-center rounded-full border border-[var(--border)] bg-[var(--surface-strong)] text-sm font-semibold tracking-[0.2em]">
-                    SZ 
+                  <span className="flex h-10 w-10 items-center justify-center rounded-full border border-[var(--border)] bg-[radial-gradient(circle_at_top,_rgba(168,85,247,0.28),_rgba(15,23,42,0.95)_72%)] text-center text-sm font-bold tracking-[0.1em] text-white shadow-[0_0_18px_rgba(168,85,247,0.38)]">
+                    <span className="inline-block translate-x-[1px]">S</span>
                   </span>
                   <span className="text-sm font-semibold uppercase tracking-[0.3em]">Salman</span>
                 </a>
